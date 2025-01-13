@@ -1,0 +1,71 @@
+<h3 class="mt-3">LJM Agregar Comentario</h3>
+<form [formGroup]="ljmAgregarComentario" (ngSubmit)="ljmagregareditar()">
+  <div class="mb-3">
+    <label for="ljmtitulo" class="form-label">ljm-Titulo</label>
+    <input
+      formControlName="ljmtitulo"
+      type="text"
+      class="form-control"
+      id="ljmtitulo"
+      autocomplete="off"
+    />
+    <span
+      *ngIf="
+        ljmAgregarComentario.get('ljmtitulo')?.invalid &&
+        ljmAgregarComentario.get('ljmtitulo')?.touched
+      "
+      class="text-danger"
+      autocomplete="off"
+    >
+      El <strong>ljm-Titulo</strong> es requerido!
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="ljmcreador" class="form-label">ljm-Creador</label>
+    <input
+      formControlName="ljmcreador"
+      type="text"
+      class="form-control"
+      id="ljmcreador"
+      autocomplete="off"
+    />
+    <span
+      *ngIf="
+        ljmAgregarComentario.get('ljmcreador')?.invalid &&
+        ljmAgregarComentario.get('ljmcreador')?.touched
+      "
+      class="text-danger"
+      autocomplete="off"
+    >
+      El <strong>ljm-Creador</strong> es requerido!
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="ljmtexto" class="form-label">ljm-Texto</label>
+    <textarea
+      formControlName="ljmtexto"
+      class="form-control"
+      id="ljmtexto"
+      rows="8"
+      autocomplete="off"
+    ></textarea>
+    <span
+      *ngIf="
+        ljmAgregarComentario.get('ljmtexto')?.invalid &&
+        ljmAgregarComentario.get('ljmtexto')?.touched
+      "
+      class="text-danger"
+      autocomplete="off"
+    >
+      El <strong>ljm-Texto</strong> es requerido!
+    </span>
+  </div>
+  <button
+    type="submit"
+    [disabled]="ljmAgregarComentario.invalid"
+    class="btn btn-success float-end"
+  >
+    Aceptar
+  </button>
+  <button type="button" routerLink="/" class="btn btn-dark">volver</button>
+</form>

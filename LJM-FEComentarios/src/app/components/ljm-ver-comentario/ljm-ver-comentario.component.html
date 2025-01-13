@@ -1,0 +1,8 @@
+<div *ngIf="LJMComentario !== undefined">
+  <h3>{{ LJMComentario.ljmtitulo }}</h3>
+  <h5>{{ LJMComentario.ljmtexto }}</h5>
+  <ul>
+    <li>{{ LJMComentario.ljmcreador }}</li>
+    <li>{{ LJMComentario.ljmfechaCreacion | date : "dd/MM/yyyy" }}</li>
+  </ul>
+</div>

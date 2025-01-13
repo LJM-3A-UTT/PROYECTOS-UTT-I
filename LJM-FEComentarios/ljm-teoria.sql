@@ -1,0 +1,16 @@
+--Crear LJM-FrontEnd-Comentarios
+-- 1. Checar la version de ng = 12.X.X
+-- 2. Instalar bootstrap 5.0.2
+-- 3. Crear componentes, interfaces y servicios (conectarnos con un backend, reutilizar codigo, etc).
+-- 4. Modificar NavBar
+-- 5. Modificar ListComentario
+-- 6. Routing
+-- 7. Agregar Comentario
+-- 8. Agregar Comentario:Bind campos
+-- 9. Agregar Comentario: Validaciones
+-- 10. Ver Comentario
+-- Terminado nuestro FrontEnd
+-- 11. Conectarnos del Frontend al Backend
+-- 12. Listar y Eliminar Comentarios
+-- 13. ver comentario
+-- 14. Actualizar Comentario
