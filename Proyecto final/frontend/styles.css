@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    color: #fff;
+}
+
+#game {
+    text-align:justify;
+}
+
+canvas {
+    border: 1px solid #fff;
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+#gameMessages {
+    position: absolute; 
+    top: 10px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%; 
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    overflow-y: auto; 
+    max-height: 200px; 
+}
+
+.game-message {
+    margin: 5px 0; 
+    animation: slideIn 1s ease-out; 
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); 
+    }
+    to {
+        transform: translateX(0);
+    }
+}
