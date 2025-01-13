@@ -1,0 +1,21 @@
+<!-- <h1>Hola</h1>
+<button class="btn btn-danger">Danger LJM</button> -->
+<!-- <ul *ngFor="let digimonljm of digimonesljm">
+  <li>
+    {{ digimonljm.name }}
+  </li>
+</ul> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let digimonljm of digimonesljm">
+      <div class="card" style="width: 18rem">
+        <img src="{{ digimonljm.img }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ digimonljm.name }}</h5>
+          <p class="card-text">{{ digimonljm.level }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
