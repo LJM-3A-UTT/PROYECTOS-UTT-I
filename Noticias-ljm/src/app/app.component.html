@@ -1,0 +1,12 @@
+<ljm-app-navbar-ljm [titulo]="'Buscador de Noticias LJM'"></ljm-app-navbar-ljm>
+<div class="container">
+  <ljm-app-formulario-ljm
+    (parametrosSelecionadosljm)="buscarNoticiasljm($event)"
+  ></ljm-app-formulario-ljm>
+
+  <ljm-app-spinner-ljm *ngIf="loadingljm"></ljm-app-spinner-ljm>
+
+  <ljm-app-listado-noticias-ljm
+    [listNoticiasljm]="listNoticiasljm"
+  ></ljm-app-listado-noticias-ljm>
+</div>
