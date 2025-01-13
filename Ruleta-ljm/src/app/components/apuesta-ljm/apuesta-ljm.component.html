@@ -1,0 +1,29 @@
+<div>
+  <h2>Apuesta</h2>
+  <p>Fichas restantes: {{ fichas }}</p>
+
+  <label for="cantidad">Cantidad a apostar:</label>
+  <input type="number" id="cantidad" [(ngModel)]="cantidadApostada" />
+
+  <label for="numero">Número a apostar:</label>
+  <input type="number" id="numero" [(ngModel)]="numeroApostado" />
+
+  <button (click)="realizarApuesta()" [disabled]="ruletaEnProceso">
+    Realizar Apuesta
+  </button>
+
+  <div *ngIf="resultado">{{ resultado }}</div>
+
+  <button
+    (click)="coincide()"
+    [disabled]="!apuestaRealizada || ruletaEnProceso || !numeroApostado"
+  >
+    Coincide
+  </button>
+  <button
+    (click)="noCoincide()"
+    [disabled]="!apuestaRealizada || ruletaEnProceso || !numeroApostado"
+  >
+    No Coincide
+  </button>
+</div>

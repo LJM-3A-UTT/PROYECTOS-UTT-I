@@ -1,0 +1,17 @@
+<div class="ruleta-container">
+  <div class="ruleta">
+    <div class="bola" [ngClass]="{ spinning: spinning }"></div>
+    <div class="division-container">
+      <div
+        class="division"
+        *ngFor="let numero of numeros; let i = index"
+        [ngStyle]="{
+          transform: 'rotate(' + i * (360 / numeros.length) + 'deg)'
+        }"
+      >
+        <span class="numero">{{ numero }}</span>
+      </div>
+    </div>
+  </div>
+  <button (click)="spinWheel()" [disabled]="spinning">Girar Ruleta</button>
+</div>
