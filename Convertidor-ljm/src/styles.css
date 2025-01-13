@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  /* background-image: url('src/assets/img/album-gangbusters.jpg'); */
+  background: linear-gradient(rgba(205, 104, 104, 0.5),rgba(152, 142, 240, 0.5)),url('src/assets/img/album-gangbusters.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
