@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Cloud-Fire-LJM",
+    "slug": "Cloud-Fire-LJM",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ljmaffuz.CloudFireLJM"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "projectId": "e176efba-313e-4688-a3d4-bf8ec38e5b71",
+      "build": {
+        "preview": {
+          "android": {
+            "buildType": "apk"
+          }
+        },
+        "preview2": {
+          "android": {
+            "gradleCommand": ":app:assembleRelease"
+          }
+        },
+        "preview3": {
+          "developmentClient": true
+        },
+        "preview4": {
+          "distribution": "internal"
+        },
+        "production": {}
+      },
+      "eas": {
+        "projectId": "e176efba-313e-4688-a3d4-bf8ec38e5b71"
+      }
+    }
+  },
+  "runtimeVersion": {
+    "policy": "appVersion"
+  },
+  "updates": {
+    "url": "https://u.expo.dev/e176efba-313e-4688-a3d4-bf8ec38e5b71"
+  }
+}
