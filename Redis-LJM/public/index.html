@@ -1,0 +1,54 @@
+<!-- public/index_simple.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+  </head>
+  <body>
+    <form id="registrationForm" action="/usuarios/register" method="post">
+      <label for="names">Names:</label>
+      <input type="text" id="names" name="names" required />
+
+      <label for="lastNames">Last Names:</label>
+      <input type="text" id="lastNames" name="lastNames" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#registrationForm").submit(function (event) {
+          event.preventDefault();
+          const formData = {
+            names: $("#names").val(),
+            lastNames: $("#lastNames").val(),
+            email: $("#email").val(),
+            password: $("#password").val(),
+          };
+          $.ajax({
+            type: "POST",
+            url: "/usuarios/register",
+            data: JSON.stringify(formData),
+            contentType: "application/json",
+            success: function (response) {
+              alert("User registered successfully! UserID: " + response.userId);
+            },
+            error: function (error) {
+              alert("Error registering user. Please try again.");
+              console.error(error);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
